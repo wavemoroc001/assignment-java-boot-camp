@@ -31,8 +31,8 @@
 
 ## Endpoint
 
-| method | url                      | Description                    | Sample Valid Request Body                  | Sample Valid Response Body |
-|--------|--------------------------|--------------------------------|--------------------------------------------|----------------------------|
-| GET    | /customers/addCreditCard | เพิ่มบัตรเครดิตให้กับ customer | [JSON](/sample/request/addCreditCard.json) |                            |
-|        |                          |                                |                                            |                            |
-|        |                          |                                |                                            |                            |
+| method | url                      | Description                    | Sample Valid Request Body                    | Sample Valid Response Body |
+|--------|--------------------------|--------------------------------|----------------------------------------------|----------------------------|
+| GET    | /customers/addCreditCard | เพิ่มบัตรเครดิตให้กับ customer | [JSON](../sample/request/addCreditCard.json) |                            |
+|        |                          |                                |                                              |                            |
+|        |                          |                                |                                              |                            |
