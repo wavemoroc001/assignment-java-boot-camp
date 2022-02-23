@@ -87,6 +87,6 @@ public class ShoppingcartItemControllerTest {
     public void whenGetEmptyCart_ShouldReturnEmptyArray() {
         shoppingcartItemService.removeItem(1L, 1L, 3);
         String response = testRestTemplate.getForObject("/carts?customerId=1", String.class);
-        assertFalse(new JSONArray(response).isEmpty());
+        assertTrue(new JSONArray(response).isEmpty());
     }
 }
