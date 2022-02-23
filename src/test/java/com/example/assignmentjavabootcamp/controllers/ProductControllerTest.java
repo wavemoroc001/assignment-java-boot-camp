@@ -3,6 +3,7 @@ package com.example.assignmentjavabootcamp.controllers;
 import com.example.assignmentjavabootcamp.models.Product;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,18 @@ public class ProductControllerTest {
         String responseString = testRestTemplate.getForObject("/products/1", String.class);
         Product product = mapper.readValue(responseString, Product.class);
         assertNotNull(product);
+    }
+
+    @Test
+    public void whenSearchContainKeyword_ShouldReturnListOfProduct() {
+        String searchProductResponse = testRestTemplate.getForObject("/products/search?keyword=" + "Adidas", String.class);
+        assertFalse(new JSONArray(searchProductResponse).isEmpty());
+    }
+
+    @Test
+    public void whenSearchNotContainKeyword_ShouldReturnEmptyArray() {
+        String searchProductResponse = testRestTemplate.getForObject("/products/search?keyword=" + "Nike", String.class);
+        assertTrue(new JSONArray(searchProductResponse).isEmpty());
     }
 
 }

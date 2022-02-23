@@ -1,12 +1,9 @@
 package com.example.assignmentjavabootcamp.controllers;
 
 import com.example.assignmentjavabootcamp.dto.RequestCart;
-import com.example.assignmentjavabootcamp.exceptions.ShoppingcartItemNotFoundException;
-import com.example.assignmentjavabootcamp.models.ShoppingcartItem;
-import com.example.assignmentjavabootcamp.repository.ShoppingcartItemRepository;
 import com.example.assignmentjavabootcamp.services.ShoppingcartItemService;
+import org.json.JSONArray;
 import org.json.JSONObject;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,17 +23,10 @@ public class ShoppingcartItemControllerTest {
     @Autowired
     ShoppingcartItemService shoppingcartItemService;
 
-    @Autowired
-    ShoppingcartItemRepository shoppingcartItemRepository;
 
     @BeforeEach
     public void setup() {
         shoppingcartItemService.addItem(1L, 1L, 3);
-    }
-
-    @AfterEach
-    public void removeOldDate() {
-        shoppingcartItemRepository.deleteAll();
     }
 
     @Test
@@ -84,7 +74,19 @@ public class ShoppingcartItemControllerTest {
     public void whenGetEmptyCartSummary_ShouldReturnNull() {
         shoppingcartItemService.removeItem(1L, 1L, 3);
         String response = testRestTemplate.getForObject("/carts/getSummary?customerId=1", String.class);
-        System.out.println(response);
         assertTrue(new JSONObject(response).isEmpty());
+    }
+
+    @Test
+    public void whenGetAllItemCart_ShouldReturnItemList() {
+        String response = testRestTemplate.getForObject("/carts?customerId=1", String.class);
+        assertFalse(new JSONArray(response).isEmpty());
+    }
+
+    @Test
+    public void whenGetEmptyCart_ShouldReturnEmptyArray() {
+        shoppingcartItemService.removeItem(1L, 1L, 3);
+        String response = testRestTemplate.getForObject("/carts?customerId=1", String.class);
+        assertFalse(new JSONArray(response).isEmpty());
     }
 }
