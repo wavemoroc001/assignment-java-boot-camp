@@ -36,11 +36,7 @@ public class ShoppingcartItemController {
     @GetMapping()
     public ResponseEntity<?> getAllItemInCart(@RequestParam Long customerId) {
         List<ShoppingcartItem> itemList = shoppingcartItemService.getAllShoppingcartItem(customerId);
-        JSONObject jsonObject = new JSONObject(itemList);
-        return ResponseEntity
-                .ok()
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(jsonObject.toString());
+        return ResponseEntity.ok().body(itemList);
     }
 
     @GetMapping(value = "/getSummary")
