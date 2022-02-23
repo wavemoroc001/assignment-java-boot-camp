@@ -1,0 +1,13 @@
+{
+    "shoppingcartItemId": 1,
+    "product": {
+        "productId": 1,
+        "name": "Adidas RUNNING Roamer FY6698",
+        "size": "9",
+        "price": 1350.0,
+        "typeOfSize": "UK",
+        "color": "Black",
+        "amount": 100
+    },
+    "amount": 2
+}

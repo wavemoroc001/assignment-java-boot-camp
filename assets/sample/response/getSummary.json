@@ -1,0 +1,27 @@
+{
+    "total": 4050,
+    "itemList": [
+        {
+            "amount": 3,
+            "product": {
+                "amount": 100,
+                "productId": 1,
+                "size": "9",
+                "color": "Black",
+                "price": 1350,
+                "name": "Adidas RUNNING Roamer FY6698",
+                "typeOfSize": "UK"
+            },
+            "shoppingcartItemId": 1,
+            "customer": {
+                "zipCode": "10140",
+                "firstname": "Tom",
+                "address": "38 Moo 14",
+                "phoneNumber": "0911111111",
+                "province": "Bangkok",
+                "customerId": 1,
+                "lastname": "Hank"
+            }
+        }
+    ]
+}

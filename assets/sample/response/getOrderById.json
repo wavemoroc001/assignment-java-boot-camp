@@ -1,0 +1,21 @@
+{
+    "buyAt": "2022-02-24T01:14:52.692781",
+    "phoneNumber": "0911111111",
+    "payBy": "CREDIT_CARD",
+    "customerId": 1,
+    "shippingAddress": "K.Tom Hank\n38 Moo 14 Bangkok 10140\n0911111111",
+    "products": [
+        {
+            "amount": 1,
+            "color": "Black",
+            "price": 1350,
+            "productName": "Adidas RUNNING Roamer FY6698"
+        },
+        {
+            "amount": 1,
+            "color": "Red",
+            "price": 2800,
+            "productName": "Adidas Yeezy 700 V2 Runner Boost Unisex B75571"
+        }
+    ]
+}
