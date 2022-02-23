@@ -33,6 +33,6 @@
 
 | method | url                      | Description                    | Sample Valid Request Body                                             | Sample Valid Response Body |
 |--------|--------------------------|--------------------------------|-----------------------------------------------------------------------|----------------------------|
-| GET    | /customers/addCreditCard | เพิ่มบัตรเครดิตให้กับ customer | ![Sample Request Add CreditCard] (/sample/request/addCreditCard.json) |                            |
+| GET    | /customers/addCreditCard | เพิ่มบัตรเครดิตให้กับ customer | [Sample Request Add CreditCard] (/sample/request/addCreditCard.json) |                            |
 |        |                          |                                |                                                                       |                            |
 |        |                          |                                |                                                                       |                            |
