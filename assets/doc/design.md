@@ -1,25 +1,32 @@
 # Design Model
 
-## คำอธิบาย
+## Goals
 
-ออกแบบการเลือกซื้อสินค้าและชำระด้วยบัตรเครดิต มี model สำหรับเก็บข้อมูล ดังต่อไปนี้
+API นี้ออกแบบมาสำหรับ flow การซื้อสินค้าด้วยบัตรเครดิตโดยที่ customer นั้นสามารถมีบัตรเครดิตในระบบได้คนละ 1 ใบ 
 
 ## WorkFlow
 
-- customer search สินค้าที่ต้องการซื้อด้วยชื่อ
-- customer เจอสินค้าที่อยากและได้เห็นรายละเอียดของสินค้า
-- customer add สินค้าลงตะกร้า
-  - customer อาจเปลี่ยนใจ remove สินค้าออกจากตะกร้าได้
-  - customer อาจเปลี่ยนใจ add สินค้าเพิ่มได้
-- customer เช็ึครายะเอียดสินค้าที่อยู่ในตะกร้าก่อน checkout
-- customer ชำระสินค้า
-- customer ใส่ที่อยู่ในการจัดส่งสินค้า
-- customer ชำระสินค้าด้วยบัตรเครดิตแล้วกรอกข้อมูลของบัตร
-- customer กดชำระสินค้าแล้วโชว์ผลการชำระเงิน ที่อยู่ ของ customer
+1. customer search สินค้าที่ต้องการซื้อด้วยชื่อ
+2. customer เจอสินค้าที่อยากและได้เห็นรายละเอียดของสินค้า
+3. customer add สินค้าลงตะกร้า
+    - customer อาจเปลี่ยนใจ remove สินค้าออกจากตะกร้าได้
+    - customer อาจเปลี่ยนใจ add สินค้าเพิ่มได้
+4. customer เช็ึครายะเอียดสินค้าที่อยู่ในตะกร้าก่อน checkout
+5. customer ชำระสินค้า
+6. customer ใส่ที่อยู่ในการจัดส่งสินค้า
+7. customer ชำระสินค้าด้วยบัตรเครดิตแล้วกรอกข้อมูลของบัตร
+8. customer กดชำระสินค้าแล้วโชว์ผลการชำระเงิน ที่อยู่ ของ customer
 
 ## ER Diagram
 
 ![er-diagram](../img/er-diagram.jpeg)
+
+### Relation
+- Customer one to one CreditCard
+- Customer many to one  Order
+- Customer many to one ShoppingCartItem
+- Order many to one Order Detail
+- Product Many to One ShoppingCartItem
 
 ## Feature
 
