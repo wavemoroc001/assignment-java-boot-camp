@@ -1,0 +1,6 @@
+{
+  "customerId": 1,
+  "creditCardNumber" : "1234567890123458",
+  "cvv" : "696",
+  "exp" : "12/25"
+}
