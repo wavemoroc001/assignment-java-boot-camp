@@ -1,5 +1,12 @@
 # Design Model
 
+##Setup Project
+
+- Java 11
+- H2 Database
+- base url = localhost:8080
+- Maven Project
+
 ## Goals
 
 API นี้ออกแบบมาสำหรับ flow การซื้อสินค้าด้วยบัตรเครดิตโดยที่ customer นั้นสามารถมีบัตรเครดิตในระบบได้คนละ 1 ใบ 
