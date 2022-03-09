@@ -10,6 +10,3 @@ values (1,'Adidas RUNNING Roamer FY6698','UK','9','Black',1350,100),
        (3,'Pharrell x NMD Human Race','EU','36','Yellow',1190,100),
        (4,'Adidas ORIGINALS ZX 700 HD FX5812','UK','11.5','Black',3400,100),
        (5,'Adidas ORIGINALS NMD R1 B42200','UK','3.5','Black',3588,100);
-
-select 1
-from dual;
